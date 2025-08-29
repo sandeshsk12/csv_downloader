@@ -69,7 +69,20 @@ if st.button('🚀 Get Query Results', use_container_width=True):
                 # 2. Process the response
                 if 'result' in response_json and 'rows' in response_json['result']:
                     data_rows = response_json['result']['rows']
-                    df = pd.DataFrame(data_rows)
+                    # Check if there are any rows to process
+                    if data_rows:
+                        # 💡 FIX: Get the original column order from the first row's keys
+                        original_column_order = list(data_rows[0].keys())
+                        
+                        # Create the DataFrame (columns will be sorted alphabetically here)
+                        df = pd.DataFrame(data_rows)
+                        
+                        # 💡 FIX: Reorder the DataFrame to match the original order
+                        df = df[original_column_order]
+                    else:
+                        # If no rows, create an empty DataFrame
+                        df = pd.DataFrame()
+                    
                     
                     # Store dataframe in session state to use for downloading
                     st.session_state.df_to_download = df 
