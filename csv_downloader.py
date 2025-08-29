@@ -40,8 +40,7 @@ st.session_state.user_api_key = st.text_input(
     label='Enter your Dune API Key',
     placeholder='Enter your key here...',
     value=st.session_state.user_api_key,
-    type='password',  # Hides the API key for security
-    help="To learn how to get a Dune API key, check out [Dune API documentation](https://dune.com/product/api) :point_right:"
+    type='password'  # Hides the API key for security
 )
 
 
