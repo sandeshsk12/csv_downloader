@@ -2,7 +2,6 @@
 
 This is a little Streamlit web app I put together to help fetch results from a Dune Analytics query and download them as a CSV file. I hope you find it useful.
 
----
 
 ## ✨ A Few Features
 
@@ -17,7 +16,7 @@ This is a little Streamlit web app I put together to help fetch results from a D
 
 ## 🚀 How to Use It
 
-1. **Enter API Key**: You can paste your Dune API key into the first input box. This can be found on your [Dune Analytics user settings page](https://dune.com/settings).
+1. **Enter API Key**: You can paste your Dune API key into the first input box. This can be found on your [Dune Analytics user settings page](https://dune.com/settings), or check out dune's guide [Dune API documentation](https://dune.com/product/api) :point_right:
 2. **Enter Query ID**: Next, you can put in the numerical ID of the Dune query you'd like to fetch. This ID is in the URL of the query page (e.g., `https://dune.com/queries/2833363`).
 3. **Get Results**: Clicking the `🚀 Get Query Results` button will start the process. A loading spinner will appear while the data is being fetched.
 4. **Preview & Download**:

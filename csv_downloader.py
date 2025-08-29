@@ -41,8 +41,10 @@ st.session_state.user_api_key = st.text_input(
     placeholder='Enter your key here...',
     value=st.session_state.user_api_key,
     type='password',  # Hides the API key for security
-    help="You can find your API key on your Dune Analytics user settings page."
+    help="To learn how to get a Dune API key, check out [Dune API documentation](https://dune.com/product/api) :point_right:"
 )
+
+
 
 st.session_state.query_id = st.number_input(
     label='Enter the Dune Query ID',
